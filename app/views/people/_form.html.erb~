@@ -1,0 +1,20 @@
+<!-- _form.html.erb -->
+
+<%= form_for @person do |f| %>
+  <table>
+    <tr>
+      <td>Name :</td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+
+    <tr>
+      <td>Email :</td>
+      <td><%= f.text_field :email %></td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td><%= f.submit %></td>
+    </tr>
+  </table>
+<% end %>
