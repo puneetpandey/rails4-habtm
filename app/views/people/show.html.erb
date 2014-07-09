@@ -1,2 +1,13 @@
-<h1>People#show</h1>
-<p>Find me in app/views/people/show.html.erb</p>
+<h1><%= @person.name %></h1>
+<p>Email: <%= @person.email %></p>
+
+<h3>Community Subscriptions</h3>
+
+<ul>
+  <% @person.communities.each do |community| %>
+    <li><%= community.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Edit", edit_person_url(@person) %>
+<%= link_to "Back", people_url %>

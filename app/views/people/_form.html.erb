@@ -12,6 +12,13 @@
       <td><%= f.text_field :email %></td>
     </tr>
 
+    <% for community in Community.all %>
+      <tr>
+        <td><%= check_box_tag "person[community_ids][]", community.id, @person.communities.include?(community) %></td>
+        <td><%= community.name %></td>
+      </tr>
+    <% end %>
+
     <tr>
       <td>&nbsp;</td>
       <td><%= f.submit %></td>

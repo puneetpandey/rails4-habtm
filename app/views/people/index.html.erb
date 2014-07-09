@@ -15,6 +15,7 @@
           <td><%= person.email %></td>
           <td>
             <ul>
+              <li><%= link_to "Show", person_url(person) %></li>
               <li><%= link_to "Edit", edit_person_url(person) %></li>
               <li><%= link_to "Delete", person_url(person) %></li>
             </ul>

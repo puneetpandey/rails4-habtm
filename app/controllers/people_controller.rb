@@ -45,6 +45,6 @@ class PeopleController < ApplicationController
 private
 
   def person_params
-    params.require(:person).permit(:name, :email)
+    params.require(:person).permit(:name, :email, {:community_ids => []})
   end
 end
